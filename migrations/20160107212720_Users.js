@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.string('Password');
     table.string('Role').notNullable().references('Role').inTable('user_roles');
     table.date('DOB').notNullable();
+    table.string('About_Me');
   })
 };
 
