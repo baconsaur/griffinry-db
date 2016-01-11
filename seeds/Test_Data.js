@@ -1,45 +1,45 @@
 
 exports.seed = function(knex, Promise) {
-  return knex('User_Resources').del()
+  return knex('user_resources').del()
   .then(function(){
-  return knex('Adoptions').del();
+  return knex('adoptions').del();
 }).then(function(){
-  return knex('Resources').del();
+  return knex('resources').del();
 }).then(function(){
-  return knex('Resource_Rarity').del();
+  return knex('resource_rarity').del();
 }).then(function(){
-  return knex('Pets').del();
+  return knex('pets').del();
 }).then(function(){
-  return knex('Pet_Colors').del();
+  return knex('pet_colors').del();
 }).then(function(){
-  return knex('Users').del();
+  return knex('users').del();
 }).then(function(){
-  return knex.raw('ALTER SEQUENCE "Users_id_seq" RESTART WITH 1;');
+  return knex.raw('ALTER SEQUENCE "users_id_seq" RESTART WITH 1;');
 }).then(function(){
-  return knex.raw('ALTER SEQUENCE "Pets_id_seq" RESTART WITH 1;');
+  return knex.raw('ALTER SEQUENCE "pets_id_seq" RESTART WITH 1;');
 }).then(function(){
-  return knex.raw('ALTER SEQUENCE "Resources_id_seq" RESTART WITH 1;');
+  return knex.raw('ALTER SEQUENCE "resources_id_seq" RESTART WITH 1;');
 }).then(function(){
     return Promise.all([
-    knex('Users').insert({
+    knex('users').insert({
       // id: 1,
       User_Name: 'JDrill',
       Email: 'JJDrill@gmail.com',
       DOB: '1995/01/01'
     }),
-    knex('Users').insert({
+    knex('users').insert({
       // id: 2,
       User_Name: 'AshK',
       Email: 'tetrapteryxgames@gmail.com',
       DOB: '1995/01/01'
     }),
-    knex('Users').insert({
+    knex('users').insert({
       // id: 3,
       User_Name: 'DavidS',
       Email: 'DavidS@gmail.com',
       DOB: '1995/01/01'
     }),
-    knex('Users').insert({
+    knex('users').insert({
       // id: 4,
       User_Name: 'JonC',
       Email: 'JonC@gmail.com',
@@ -48,34 +48,34 @@ exports.seed = function(knex, Promise) {
   ]);
 }).then(function(){
   return Promise.all([
-    knex('Pet_Colors').insert({Color: 'Red'}),
-    knex('Pet_Colors').insert({Color: 'Gold'}),
-    knex('Pet_Colors').insert({Color: 'Blue'}),
-    knex('Pet_Colors').insert({Color: 'Black'}),
-    knex('Pet_Colors').insert({Color: 'Yellow'})
+    knex('pet_colors').insert({Color: 'Red'}),
+    knex('pet_colors').insert({Color: 'Gold'}),
+    knex('pet_colors').insert({Color: 'Blue'}),
+    knex('pet_colors').insert({Color: 'Black'}),
+    knex('pet_colors').insert({Color: 'Yellow'})
   ]);
 }).then(function(){
   return Promise.all([
-    knex('Pets').insert({
+    knex('pets').insert({
       // id: 1,
       Type: 'Finchet'
     })
   ]);
 }).then(function(){
   return Promise.all([
-    knex('Resource_Rarity').insert({Rarity: 'Common'}),
-    knex('Resource_Rarity').insert({Rarity: 'Rare'}),
-    knex('Resource_Rarity').insert({Rarity: 'Epic'})
+    knex('resource_rarity').insert({Rarity: 'Common'}),
+    knex('resource_rarity').insert({Rarity: 'Rare'}),
+    knex('resource_rarity').insert({Rarity: 'Epic'})
   ]);
 }).then(function(){
   return Promise.all([
-    knex('Resources').insert({
+    knex('resources').insert({
       // id: 1,
       Name: 'Corn',
       Value: '2',
       Rarity: 'Common'
     }),
-    knex('Resources').insert({
+    knex('resources').insert({
       // id: 2,
       Name: 'Meat',
       Value: '5',
@@ -84,10 +84,11 @@ exports.seed = function(knex, Promise) {
   ]);
 }).then(function(){
   return Promise.all([
-    knex('Adoptions').insert({
+    knex('adoptions').insert({
       User_Id: 1,
       Pet_Id: 1,
       Color: 'Red',
+      Name: 'Piglet',
       Experience: 0,
       Max_Health: 10,
       Max_Energy: 5,
@@ -95,10 +96,11 @@ exports.seed = function(knex, Promise) {
       Current_Energy: 5,
       Last_Updated: '2016/01/01'
     }),
-    knex('Adoptions').insert({
+    knex('adoptions').insert({
       User_Id: 2,
       Pet_Id: 1,
       Color: 'Gold',
+      Name: 'Fluffy',
       Experience: 0,
       Max_Health: 10,
       Max_Energy: 5,
@@ -106,10 +108,11 @@ exports.seed = function(knex, Promise) {
       Current_Energy: 5,
       Last_Updated: '2016/01/01'
     }),
-    knex('Adoptions').insert({
+    knex('adoptions').insert({
       User_Id: 3,
       Pet_Id: 1,
       Color: 'Blue',
+      Name: 'Spot',
       Experience: 0,
       Max_Health: 10,
       Max_Energy: 5,
@@ -117,10 +120,11 @@ exports.seed = function(knex, Promise) {
       Current_Energy: 5,
       Last_Updated: '2016/01/01'
     }),
-    knex('Adoptions').insert({
+    knex('adoptions').insert({
       User_Id: 4,
       Pet_Id: 1,
       Color: 'Black',
+      Name: 'Larry',
       Experience: 0,
       Max_Health: 10,
       Max_Energy: 5,
@@ -131,22 +135,22 @@ exports.seed = function(knex, Promise) {
   ]);
 }).then(function(){
   return Promise.all([
-    knex('User_Resources').insert({
+    knex('user_resources').insert({
       User_Id: 1,
       Resource_Id: 1,
       Quantity: 5
     }),
-    knex('User_Resources').insert({
+    knex('user_resources').insert({
       User_Id: 2,
       Resource_Id: 1,
       Quantity: 5
     }),
-    knex('User_Resources').insert({
+    knex('user_resources').insert({
       User_Id: 3,
       Resource_Id: 1,
       Quantity: 5
     }),
-    knex('User_Resources').insert({
+    knex('user_resources').insert({
       User_Id: 4,
       Resource_Id: 1,
       Quantity: 5

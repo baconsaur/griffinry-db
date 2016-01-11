@@ -1,13 +1,13 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('Resources', function(table){
+  return knex.schema.createTable('resources', function(table){
     table.increments().primary();
     table.string('Name').notNullable().unique();
     table.integer('Value').notNullable();
-    table.string('Rarity').notNullable().references('Rarity').inTable('Resource_Rarity');
+    table.string('Rarity').notNullable().references('Rarity').inTable('resource_rarity');
   })
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('Resources');
+  return knex.schema.dropTable('resources');
 };
