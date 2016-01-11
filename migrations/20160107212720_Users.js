@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments().primary();
     table.string('User_Name').notNullable().unique();
     table.string('Email').notNullable().unique();
+    table.string('Password');
     table.date('DOB').notNullable();
   })
 };
