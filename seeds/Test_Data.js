@@ -49,9 +49,8 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return Promise.all([
     knex('pet_colors').insert({Color: 'Red'}),
-    knex('pet_colors').insert({Color: 'Gold'}),
+    knex('pet_colors').insert({Color: 'Green'}),
     knex('pet_colors').insert({Color: 'Blue'}),
-    knex('pet_colors').insert({Color: 'Black'}),
     knex('pet_colors').insert({Color: 'Yellow'})
   ]);
 }).then(function(){
@@ -99,7 +98,7 @@ exports.seed = function(knex, Promise) {
     knex('adoptions').insert({
       User_Id: 2,
       Pet_Id: 1,
-      Color: 'Gold',
+      Color: 'Green',
       Name: 'Fluffy',
       Experience: 0,
       Max_Health: 10,
@@ -123,7 +122,7 @@ exports.seed = function(knex, Promise) {
     knex('adoptions').insert({
       User_Id: 4,
       Pet_Id: 1,
-      Color: 'Black',
+      Color: 'Yellow',
       Name: 'Larry',
       Experience: 0,
       Max_Health: 10,
