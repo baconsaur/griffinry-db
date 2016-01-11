@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.integer('User_Id').notNullable().references('id').inTable('users');
     table.integer('Pet_Id').notNullable().references('id').inTable('pets');
     table.string('Color').notNullable().references('Color').inTable('pet_colors');
+    table.string('Name').notNullable();
     table.integer('Experience').notNullable();
     table.integer('Max_Health').notNullable();
     table.integer('Max_Energy').notNullable();
