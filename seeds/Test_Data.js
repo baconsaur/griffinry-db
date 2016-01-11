@@ -14,27 +14,33 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return knex('Users').del();
 }).then(function(){
+  return knex.raw('ALTER SEQUENCE "Users_id_seq" RESTART WITH 1;');
+}).then(function(){
+  return knex.raw('ALTER SEQUENCE "Pets_id_seq" RESTART WITH 1;');
+}).then(function(){
+  return knex.raw('ALTER SEQUENCE "Resources_id_seq" RESTART WITH 1;');
+}).then(function(){
     return Promise.all([
     knex('Users').insert({
-      id: 1,
+      // id: 1,
       User_Name: 'JDrill',
       Email: 'JJDrill@gmail.com',
       DOB: '1995/01/01'
     }),
     knex('Users').insert({
-      id: 2,
+      // id: 2,
       User_Name: 'AshK',
       Email: 'tetrapteryxgames@gmail.com',
       DOB: '1995/01/01'
     }),
     knex('Users').insert({
-      id: 3,
+      // id: 3,
       User_Name: 'DavidS',
       Email: 'DavidS@gmail.com',
       DOB: '1995/01/01'
     }),
     knex('Users').insert({
-      id: 4,
+      // id: 4,
       User_Name: 'JonC',
       Email: 'JonC@gmail.com',
       DOB: '1995/01/01'
@@ -51,7 +57,7 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return Promise.all([
     knex('Pets').insert({
-      id: 1,
+      // id: 1,
       Type: 'Finchet'
     })
   ]);
@@ -64,13 +70,13 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return Promise.all([
     knex('Resources').insert({
-      id: 1,
+      // id: 1,
       Name: 'Corn',
       Value: '2',
       Rarity: 'Common'
     }),
     knex('Resources').insert({
-      id: 2,
+      // id: 2,
       Name: 'Meat',
       Value: '5',
       Rarity: 'Rare'
