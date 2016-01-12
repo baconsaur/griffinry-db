@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('adoptions', function(table){
     table.increments().primary();
     table.integer('User_Id').notNullable().references('id').inTable('users');
-    table.integer('Pet_Id').notNullable().references('id').inTable('pets');
+    table.string('Pet_Id').notNullable().references('Type').inTable('pets');
     table.string('Color').notNullable().references('Color').inTable('pet_colors');
     table.string('Name').notNullable();
     table.integer('Experience').notNullable();

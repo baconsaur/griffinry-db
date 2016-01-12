@@ -18,8 +18,6 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return knex.raw('ALTER SEQUENCE "users_id_seq" RESTART WITH 1;');
 }).then(function(){
-  return knex.raw('ALTER SEQUENCE "pets_id_seq" RESTART WITH 1;');
-}).then(function(){
   return knex.raw('ALTER SEQUENCE "resources_id_seq" RESTART WITH 1;');
 }).then(function(){
   return Promise.all([
@@ -71,7 +69,6 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return Promise.all([
     knex('pets').insert({
-      // id: 1,
       Type: 'Finchet'
     })
   ]);
@@ -100,7 +97,7 @@ exports.seed = function(knex, Promise) {
   return Promise.all([
     knex('adoptions').insert({
       User_Id: 1,
-      Pet_Id: 1,
+      Pet_Id: 'Finchet',
       Color: 'Red',
       Name: 'Piglet',
       Experience: 0,
@@ -112,7 +109,7 @@ exports.seed = function(knex, Promise) {
     }),
     knex('adoptions').insert({
       User_Id: 2,
-      Pet_Id: 1,
+      Pet_Id: 'Finchet',
       Color: 'Green',
       Name: 'Fluffy',
       Experience: 0,
@@ -124,7 +121,7 @@ exports.seed = function(knex, Promise) {
     }),
     knex('adoptions').insert({
       User_Id: 3,
-      Pet_Id: 1,
+      Pet_Id: 'Finchet',
       Color: 'Blue',
       Name: 'Spot',
       Experience: 0,
@@ -136,7 +133,7 @@ exports.seed = function(knex, Promise) {
     }),
     knex('adoptions').insert({
       User_Id: 4,
-      Pet_Id: 1,
+      Pet_Id: 'Finchet',
       Color: 'Yellow',
       Name: 'Larry',
       Experience: 0,
