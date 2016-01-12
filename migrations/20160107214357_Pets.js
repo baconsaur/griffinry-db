@@ -1,8 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('pets', function(table){
-    table.increments().primary();
-    table.string('Type').notNullable().unique();
+    table.string('Type').notNullable().unique().primary();
   })
 };
 
