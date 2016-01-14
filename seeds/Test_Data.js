@@ -16,6 +16,8 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return knex('user_roles').del();
 }).then(function(){
+  return knex('experience_levels').del();
+}).then(function(){
   return knex.raw('ALTER SEQUENCE "users_id_seq" RESTART WITH 1;');
 }).then(function(){
   return knex.raw('ALTER SEQUENCE "resources_id_seq" RESTART WITH 1;');
@@ -35,28 +37,72 @@ exports.seed = function(knex, Promise) {
       User_Name: 'JDrill',
       Email: 'JJDrill@gmail.com',
       Role: 'Administrator',
-      DOB: '1995/01/01'
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
     knex('users').insert({
       // id: 2,
       User_Name: 'AshK',
       Email: 'tetrapteryxgames@gmail.com',
       Role: 'Administrator',
-      DOB: '1995/01/01'
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
     knex('users').insert({
       // id: 3,
       User_Name: 'DavidS',
       Email: 'DavidS@gmail.com',
       Role: 'Administrator',
-      DOB: '1995/01/01'
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
     knex('users').insert({
       // id: 4,
       User_Name: 'JonC',
       Email: 'JonC@gmail.com',
       Role: 'Administrator',
-      DOB: '1995/01/01'
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
+    }),
+    knex('users').insert({
+      // id: 5,
+      User_Name: 'Test1',
+      Email: 'Test1@gmail.com',
+      Role: 'User',
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
+    }),
+    knex('users').insert({
+      // id: 5,
+      User_Name: 'Test2',
+      Email: 'Test2@gmail.com',
+      Role: 'User',
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
+    }),
+    knex('users').insert({
+      // id: 5,
+      User_Name: 'Test3',
+      Email: 'Test3@gmail.com',
+      Role: 'User',
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
+    }),
+    knex('users').insert({
+      // id: 5,
+      User_Name: 'Test4',
+      Email: 'Test4@gmail.com',
+      Role: 'User',
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
+    }),
+    knex('users').insert({
+      // id: 5,
+      User_Name: 'Test5',
+      Email: 'Test5@gmail.com',
+      Role: 'User',
+      DOB: '1995/01/01',
+      Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
   ]);
 }).then(function(){
