@@ -9,8 +9,8 @@ exports.up = function(knex, Promise) {
     table.integer('Experience').notNullable();
     table.integer('Max_Health').notNullable();
     table.integer('Max_Energy').notNullable();
-    table.integer('Current_Health').notNullable();
-    table.integer('Current_Energy').notNullable();
+    table.decimal('Current_Health').notNullable();
+    table.decimal('Current_Energy').notNullable();
     table.dateTime('Last_Updated').notNullable();
   })
 };
