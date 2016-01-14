@@ -81,16 +81,19 @@ exports.seed = function(knex, Promise) {
 }).then(function(){
   return Promise.all([
     knex('resources').insert({
-      // id: 1,
       Name: 'Corn',
       Value: '2',
       Rarity: 'Common'
     }),
     knex('resources').insert({
-      // id: 2,
       Name: 'Meat',
       Value: '5',
       Rarity: 'Rare'
+    }),
+    knex('resources').insert({
+      Name: 'Pizza',
+      Value: '8',
+      Rarity: 'Epic'
     })
   ]);
 }).then(function(){
