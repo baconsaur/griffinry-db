@@ -73,7 +73,7 @@ exports.seed = function(knex, Promise) {
       Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
     knex('users').insert({
-      // id: 5,
+      // id: 6,
       User_Name: 'Test2',
       Email: 'Test2@gmail.com',
       Role: 'User',
@@ -81,7 +81,7 @@ exports.seed = function(knex, Promise) {
       Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
     knex('users').insert({
-      // id: 5,
+      // id: 7,
       User_Name: 'Test3',
       Email: 'Test3@gmail.com',
       Role: 'User',
@@ -89,7 +89,7 @@ exports.seed = function(knex, Promise) {
       Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
     knex('users').insert({
-      // id: 5,
+      // id: 8,
       User_Name: 'Test4',
       Email: 'Test4@gmail.com',
       Role: 'User',
@@ -97,7 +97,7 @@ exports.seed = function(knex, Promise) {
       Password: '$2a$10$a2PJOBkTmRxx2YXqmW80Bedt/il/LW1gTEcbbyEpAPJFvOep.rURa'
     }),
     knex('users').insert({
-      // id: 5,
+      // id: 9,
       User_Name: 'Test5',
       Email: 'Test5@gmail.com',
       Role: 'User',
@@ -154,7 +154,7 @@ exports.seed = function(knex, Promise) {
       Max_Energy: 5,
       Current_Health: 10,
       Current_Energy: 5,
-      Last_Updated: '2016/01/01'
+      Last_Updated: new Date()
     }),
     knex('adoptions').insert({
       User_Id: 2,
@@ -166,7 +166,7 @@ exports.seed = function(knex, Promise) {
       Max_Energy: 5,
       Current_Health: 10,
       Current_Energy: 5,
-      Last_Updated: '2016/01/01'
+      Last_Updated: new Date()
     }),
     knex('adoptions').insert({
       User_Id: 3,
@@ -178,7 +178,7 @@ exports.seed = function(knex, Promise) {
       Max_Energy: 5,
       Current_Health: 10,
       Current_Energy: 5,
-      Last_Updated: '2016/01/01'
+      Last_Updated: new Date()
     }),
     knex('adoptions').insert({
       User_Id: 4,
@@ -190,7 +190,70 @@ exports.seed = function(knex, Promise) {
       Max_Energy: 5,
       Current_Health: 10,
       Current_Energy: 5,
-      Last_Updated: '2016/01/01'
+      Last_Updated: new Date()
+    }),
+
+
+
+    knex('adoptions').insert({
+      User_Id: 5,
+      Pet_Id: 'Finchet',
+      Color: 'Yellow',
+      Name: 'Test1 Finchet',
+      Experience: 0,
+      Max_Health: 10,
+      Max_Energy: 5,
+      Current_Health: 10,
+      Current_Energy: 5,
+      Last_Updated: new Date()
+    }),
+    knex('adoptions').insert({
+      User_Id: 6,
+      Pet_Id: 'Finchet',
+      Color: 'Blue',
+      Name: 'Test2 Finchet',
+      Experience: 0,
+      Max_Health: 10,
+      Max_Energy: 5,
+      Current_Health: 10,
+      Current_Energy: 5,
+      Last_Updated: new Date()
+    }),
+    knex('adoptions').insert({
+      User_Id: 7,
+      Pet_Id: 'Finchet',
+      Color: 'Red',
+      Name: 'Test3 Finchet',
+      Experience: 0,
+      Max_Health: 10,
+      Max_Energy: 5,
+      Current_Health: 10,
+      Current_Energy: 5,
+      Last_Updated: new Date()
+    }),
+    knex('adoptions').insert({
+      User_Id: 8,
+      Pet_Id: 'Finchet',
+      Color: 'Green',
+      Name: 'Test4 Finchet',
+      Experience: 0,
+      Max_Health: 10,
+      Max_Energy: 5,
+      Current_Health: 10,
+      Current_Energy: 5,
+      Last_Updated: new Date()
+    }),
+    knex('adoptions').insert({
+      User_Id: 9,
+      Pet_Id: 'Finchet',
+      Color: 'Yellow',
+      Name: 'Test5 Finchet',
+      Experience: 0,
+      Max_Health: 10,
+      Max_Energy: 5,
+      Current_Health: 10,
+      Current_Energy: 5,
+      Last_Updated: new Date()
     }),
   ]);
 }).then(function(){
@@ -212,6 +275,31 @@ exports.seed = function(knex, Promise) {
     }),
     knex('user_resources').insert({
       User_Id: 4,
+      Resource_Id: 1,
+      Quantity: 5
+    }),
+    knex('user_resources').insert({
+      User_Id: 5,
+      Resource_Id: 1,
+      Quantity: 5
+    }),
+    knex('user_resources').insert({
+      User_Id: 6,
+      Resource_Id: 1,
+      Quantity: 5
+    }),
+    knex('user_resources').insert({
+      User_Id: 7,
+      Resource_Id: 1,
+      Quantity: 5
+    }),
+    knex('user_resources').insert({
+      User_Id: 8,
+      Resource_Id: 1,
+      Quantity: 5
+    }),
+    knex('user_resources').insert({
+      User_Id: 9,
       Resource_Id: 1,
       Quantity: 5
     })
