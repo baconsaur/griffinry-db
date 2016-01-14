@@ -170,5 +170,48 @@ exports.seed = function(knex, Promise) {
       Quantity: 5
     })
   ]);
-});
+}).then(function(){
+  return Promise.all([
+    knex('experience_levels').insert({
+      Level: 1,
+      XP_Needed: 0
+    }),
+    knex('experience_levels').insert({
+      Level: 2,
+      XP_Needed: 10
+    }),
+    knex('experience_levels').insert({
+      Level: 3,
+      XP_Needed: 20
+    }),
+    knex('experience_levels').insert({
+      Level: 4,
+      XP_Needed: 40
+    }),
+    knex('experience_levels').insert({
+      Level: 5,
+      XP_Needed: 80
+    }),
+    knex('experience_levels').insert({
+      Level: 6,
+      XP_Needed: 160
+    }),
+    knex('experience_levels').insert({
+      Level: 7,
+      XP_Needed: 320
+    }),
+    knex('experience_levels').insert({
+      Level: 8,
+      XP_Needed: 640
+    }),
+    knex('experience_levels').insert({
+      Level: 9,
+      XP_Needed: 1280
+    }),
+    knex('experience_levels').insert({
+      Level: 10,
+      XP_Needed: 2560
+    })
+  ]);
+})
 };
